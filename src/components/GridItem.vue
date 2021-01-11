@@ -648,7 +648,10 @@
                 this.lastX = x;
                 this.lastY = y;
 
-                if (this.innerX !== pos.x || this.innerY !== pos.y) {
+                // if (this.innerX !== pos.x || this.innerY !== pos.y) {
+                //     this.$emit("move", this.i, pos.x, pos.y);
+                // }
+                if (pos.x !== undefined && pos.y !== undefined) {
                     this.$emit("move", this.i, pos.x, pos.y);
                 }
                 if (event.type === "dragend" && (this.previousX !== this.innerX || this.previousY !== this.innerY)) {
